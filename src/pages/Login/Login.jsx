@@ -1,15 +1,21 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import { NavLink } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Button from '../../components/Button/Button';
+import { loginUser} from '../../redux/auth.actions';
 import "./Login.scss"
 
 const Login = () => {
 
   const {register, handleSubmit, formState : {errors}} = useForm();
 
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+
   const send = (formdata) => {
-    console.log(formdata);
+    dispatch(loginUser(formdata, navigate));
   }
 
   return (
