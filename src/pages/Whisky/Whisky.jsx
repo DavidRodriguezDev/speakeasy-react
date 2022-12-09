@@ -1,9 +1,13 @@
 import React from 'react'
+import ButtonLogout from '../../components/ButtonLogout/ButtonLogout'
 import "./Whisky.scss"
 
 const Whisky = () => {
   return (
-    <div>Whisky</div>
+    <div>
+    Whisky
+    <ButtonLogout></ButtonLogout>
+    </div>
   )
 }
 

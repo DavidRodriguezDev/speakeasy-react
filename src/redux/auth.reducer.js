@@ -21,6 +21,12 @@ const authReducer = (state = INITIAL_STATE, action) => {
             return {...state, isLoading: false, error: false};
         case actions.REGISTER_USER_ERROR : 
             return {...state, error: action.payload, isLoading: false};
+        case actions.LOGOUT_USER : 
+            return {...state, isLoading: true};
+        case actions.LOGOUT_USER_OK : 
+            return {...INITIAL_STATE};
+        case actions.LOGOUT_USER_ERROR : 
+            return {...state, error: action.payload, isLoading: false};
         default : 
             return state;
     }

@@ -23,6 +23,8 @@ const Register = () => {
       <div className='b-register__container'>
         <h1 className='b-title'>NEW YORK´S SPEAKEASY</h1>
         <form className='b-register__form' onSubmit={handleSubmit(send)}>
+          <label className='b-register__label'>Nombre Usuario</label>
+          <input className='b-register__input--sec' type="text" placeholder='Nombre de usuario' {...register("name")}></input>
           <label className='b-register__label'>Email Usuario</label>
           <input className='b-register__input' type="text" placeholder='Email Usuario' {...register("email",
             {required : "El email no puede ser vacío",
