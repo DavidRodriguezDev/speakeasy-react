@@ -1,6 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { NavLink } from 'react-router-dom';
+import Button from '../../components/Button/Button';
 import "./Login.scss"
 
 const Login = () => {
@@ -13,8 +14,9 @@ const Login = () => {
 
   return (
     <div className='b-login__container'>
-      <form onSubmit={handleSubmit(send)}>
-        <label>Email Usuario</label>
+      <h1 className='b-title'>NEW YORK´S SPEAKEASY</h1>
+      <form className='b-login__form' onSubmit={handleSubmit(send)}>
+        <label className='b-login__label'>Email Usuario</label>
         <input className='b-login__input' type="text" placeholder='Email Usuario' {...register("email",
           {required : "El email no puede ser vacío",
           pattern : {
@@ -24,11 +26,11 @@ const Login = () => {
         )}></input>
          <div className='b-errors__container'>
             {errors.email && <>
-              {errors.email.type === "required" && <p className='b-login-error'>{errors.email.message}</p>}
-              {errors.email.type === "pattern" && <p className='b-login-error'>{errors.email.message}</p>}
+              {errors.email.type === "required" && <p className='b-login__error'>{errors.email.message}</p>}
+              {errors.email.type === "pattern" && <p className='b-login__error'>{errors.email.message}</p>}
             </>}
           </div>
-          <label>Contraseña</label>
+          <label className='b-login__label'>Contraseña</label>
             <input className='b-login__input' type="password" placeholder='Contraseña' {...register("password", {
               required : "La contraseña no puede ser vacía",
               pattern : 
@@ -39,14 +41,18 @@ const Login = () => {
             })}/>
             <div className='b-errors__container'>
             {errors.password && <>
-              {errors.password.type === "required" && <p className='b-login-error'>{errors.password.message}</p>}
-              {errors.password.type === "pattern" && <p className='b-login-error'>{errors.password.message}</p>}
+              {errors.password.type === "required" && <p className='b-login__error'>{errors.password.message}</p>}
+              {errors.password.type === "pattern" && <p className='b-login__error'>{errors.password.message}</p>}
             </>}
             </div>
-        <button>Enviar</button>
+        <Button className="b-login__form___button" text="Comenzar"></Button>
       </form>
-      <div className='b-login-create'>
-        <NavLink style={{ textDecoration: 'none' }} to={'/register'}><p className='b-login-count'>Crear cuenta</p></NavLink>
+      <div className='b-login-recover'>
+        <p>¿No puedes iniciar sesión? <NavLink style={{ textDecoration: 'none' }} to={'/gin'}><span className='b-login__span'>Restablecer contraseña</span></NavLink></p>
+      </div>
+      <h5>O</h5>
+      <div className='b-login__create'>
+        <NavLink style={{ textDecoration: 'none' }} to={'/register'}><p className='b-login__count'>Crear cuenta</p></NavLink>
       </div>   
     </div>
   )
