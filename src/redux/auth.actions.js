@@ -12,12 +12,12 @@ export const LOGOUT_USER_ERROR = "LOGOUT_USER_ERROR";
 
 export const loginUser = (formdata, navigate) => async (dispatch) => {
     dispatch({type: "LOGIN_USER"});
-
+    
     try {
         
         const result = await API.post("users/login", formdata);
         localStorage.setItem("token", result.data.token);
-        localStorage.setItem("user", JSON.stringify(result.data.users));
+        localStorage.setItem("user", JSON.stringify(result.data.user));
         dispatch({type: "LOGIN_USER_OK", payload: result.data});
         navigate("/whisky");
 
