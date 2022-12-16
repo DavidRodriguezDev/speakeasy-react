@@ -24,3 +24,14 @@
     }
 
 }
+
+section {
+    margin: 60px 0 100px 0;
+}
+
+.b-position-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50vw;
+    transform: translate(-50%, 0%);
+}

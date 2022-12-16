@@ -1,16 +1,17 @@
 import React from 'react'
+import NavBar from '../../components/NavBar/NavBar'
 import "./Home.scss"
 
 const Home = () => {
   return (
     <div className='b-home__container'>
         <div className='b-home__hero'>   
-            <h1 className='b-home__titles'>Adéntrate en la clandestinidad de la Ley Seca</h1>
+            <h1 className='b-home__titles'>ADÉNTRATE EN LA CLANDESTINIDAD DE LA LEY SECA</h1>
             <p>Se llamaron Speakeasy a los locales ilegales abiertos durante los años en los que estuvo vigente la Ley Seca
             en Estados Unidos (1920-1933)</p>
         </div>
         <article className="b-home__history">
-            <section >
+            <section>
                 <div className='b-home__beginnings'>
                     <h2 className='b-home__titles'>LOS COMIENZOS</h2>
                     <h3>Todo comenzó en 1919, cuando se  se ratificó la 18.ª enmienda a la Constitución de Estados Unidos, que prohibía 
@@ -56,6 +57,9 @@ const Home = () => {
                 </div>
             </section>
         </article>
+        <div className='b-position-nav'>
+            <NavBar></NavBar>
+          </div>
     </div>
   )
 }
