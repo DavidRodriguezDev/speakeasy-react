@@ -74,6 +74,13 @@
         color: white;
         text-decoration: none;
     }
+
+    &__checkbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--blue);
+    }
 }
 
 .b-errors__container {

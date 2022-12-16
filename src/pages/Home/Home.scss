@@ -1,0 +1,26 @@
+.b-home {
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--yellow);
+        min-height: 100vh;
+    }
+
+    &__hero {
+        text-align: center;
+        width: 80%;
+    }
+
+    &__history{
+        text-align: center;
+        width: 80%;
+    }
+
+    &__titles {
+        color: var(--red);
+    }
+
+}

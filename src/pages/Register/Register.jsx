@@ -59,6 +59,9 @@ const Register = () => {
                 {errors.password.type === "pattern" && <p className='b-register__error'>{errors.password.message}</p>}
               </>}
               </div>
+            <div className='b-register__checkbox'>  
+              <input type="checkbox" {...register("check", {required : true})}></input><p className='b-register__checked'>Al resgistrar una cuenta usted reconoce tener la edad legal para el consumo de bebidas alcohólicas en tu país. Por favor no compartas este contenido a personas menores de edad.</p>
+            </div>
           <Button className="b-register__form___button" text="Registrar"></Button>
         </form>
       </div>

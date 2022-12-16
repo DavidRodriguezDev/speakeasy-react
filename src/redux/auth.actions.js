@@ -18,7 +18,7 @@ export const loginUser = (formdata, navigate) => async (dispatch) => {
         localStorage.setItem("token", result.data.token);
         localStorage.setItem("user", JSON.stringify(result.data.user));
         dispatch({type: "LOGIN_USER_OK", payload: result.data});
-        navigate("/whisky");
+        navigate("/");
 
     } catch (error) {
         

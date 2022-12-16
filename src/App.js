@@ -2,6 +2,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Gin from './pages/Gin/Gin';
+import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Recipes from './pages/Recipes/Recipes';
 import Register from './pages/Register/Register';
@@ -16,6 +17,7 @@ function App() {
     <Provider store={store}>
       <Router>
         <Routes>
+          <Route path="/" element={<Home></Home>}></Route>
           <Route path="/gin" element={<Gin></Gin>}></Route>
           <Route path="/rum" element={<Rum/>}></Route>
           <Route path="/tequila" element={<Tequila/>}></Route>
