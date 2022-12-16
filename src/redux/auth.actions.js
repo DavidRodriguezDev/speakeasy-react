@@ -12,7 +12,6 @@ export const LOGOUT_USER_ERROR = "LOGOUT_USER_ERROR";
 
 export const loginUser = (formdata, navigate) => async (dispatch) => {
     dispatch({type: "LOGIN_USER"});
-    
     try {
         
         const result = await API.post("users/login", formdata);

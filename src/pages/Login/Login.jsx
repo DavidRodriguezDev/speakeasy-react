@@ -54,9 +54,9 @@ const Login = () => {
         <Button className="b-login__form___button" text="Comenzar"></Button>
       </form>
       <div className='b-login-recover'>
-        <p>¿No puedes iniciar sesión? <NavLink style={{ textDecoration: 'none' }} to={'/gin'}><span className='b-login__span'>Restablecer contraseña</span></NavLink></p>
+        <p className='b-login-question'>¿No puedes iniciar sesión? <NavLink style={{ textDecoration: 'none' }} to={'/gin'}><span className='b-login__span'>Restablecer contraseña</span></NavLink></p>
       </div>
-      <h5>O</h5>
+      <h5 className='b-login-question'>O</h5>
       <div className='b-login__create'>
         <NavLink style={{ textDecoration: 'none' }} to={'/register'}><p className='b-login__count'>Crear cuenta</p></NavLink>
       </div>   

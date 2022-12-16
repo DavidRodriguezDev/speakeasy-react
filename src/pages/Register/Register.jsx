@@ -2,6 +2,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import BackButton from '../../components/BackButton/BackButton';
 import Button from '../../components/Button/Button';
 import { registerUser } from '../../redux/auth.actions';
 import "./Register.scss"
@@ -21,7 +22,11 @@ const Register = () => {
   return (
     
       <div className='b-register__container'>
+        <div className='b-register-header'>
+        <BackButton src="../../assets/back.svg"></BackButton>
         <h1 className='b-title'>NEW YORK´S SPEAKEASY</h1>
+        <h3 className='b-opacity'>0</h3>
+      </div>
         <form className='b-register__form' onSubmit={handleSubmit(send)}>
           <label className='b-register__label'>Nombre Usuario</label>
           <input className='b-register__input--sec' type="text" placeholder='Nombre de usuario' {...register("name")}></input>
