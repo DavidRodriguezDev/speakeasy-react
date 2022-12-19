@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
@@ -11,23 +12,29 @@ import Tequila from './pages/Tequila/Tequila';
 import Vodka from './pages/Vodka/Vodka';
 import Whisky from './pages/Whisky/Whisky';
 import store from './redux/store';
+import { UserContext } from './shared/contexts/UserContext';
 
 function App() {
+
+  const [token, setToken] = useState(localStorage.getItem('token'));
+
   return (
     <Provider store={store}>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home></Home>}></Route>
-          <Route path="/gin" element={<Gin></Gin>}></Route>
-          <Route path="/rum" element={<Rum/>}></Route>
-          <Route path="/tequila" element={<Tequila/>}></Route>
-          <Route path="/whisky" element={<Whisky/>}></Route>
-          <Route path="/vodka" element={<Vodka/>}></Route>
-          <Route path="/login" element={<Login/>}></Route>
-          <Route path="/register" element={<Register/>}></Route>
-          <Route path="/recipes" element={<Recipes/>}></Route>
-        </Routes>
-      </Router>
+      <UserContext.Provider value={{token, setToken}}>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home></Home>}></Route>
+            <Route path="/gin" element={token ? <Gin></Gin> : <Login></Login>}></Route>
+            <Route path="/rum" element={token ? <Rum/> : <Login></Login>}></Route>
+            <Route path="/tequila" element={token ? <Tequila/> : <Login></Login>}></Route>
+            <Route path="/whisky" element={token ? <Whisky/> : <Login></Login>}></Route>
+            <Route path="/vodka" element={token ? <Vodka/> : <Login></Login>}></Route>
+            <Route path="/login" element={<Login/>}></Route>
+            <Route path="/register" element={<Register/>}></Route>
+            <Route path="/recipes" element={token ? <Recipes/> : <Login></Login>}></Route>
+          </Routes>
+        </Router>
+      </UserContext.Provider>
     </Provider>
   );
 }

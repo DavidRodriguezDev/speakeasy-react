@@ -23,10 +23,10 @@ const Register = () => {
     
       <div className='b-register__container'>
         <div className='b-register-header'>
-        <BackButton src="../../assets/back.svg"></BackButton>
-        <h1 className='b-title'>NEW YORK´S SPEAKEASY</h1>
-        <h3 className='b-opacity'>0</h3>
-      </div>
+          <BackButton src="../../assets/left.png"></BackButton>
+          <h1 className='b-title'>CHICAGO´S SPEAKEASY</h1>
+          <h3 className='b-opacity'>0</h3>
+        </div>
         <form className='b-register__form' onSubmit={handleSubmit(send)}>
           <label className='b-register__label'>Nombre Usuario</label>
           <input className='b-register__input--sec' type="text" placeholder='Nombre de usuario' {...register("name")}></input>
@@ -44,7 +44,7 @@ const Register = () => {
                 {errors.email.type === "pattern" && <p className='b-register__error'>{errors.email.message}</p>}
               </>}
             </div>
-            <label className='b-login__label'>Contraseña</label>
+            <label className='b-register__label'>Contraseña</label>
               <input className='b-register__input' type="password" placeholder='Contraseña' {...register("password", {
                 required : "La contraseña no puede ser vacía",
                 pattern : 
@@ -62,7 +62,7 @@ const Register = () => {
             <div className='b-register__checkbox'>  
               <input type="checkbox" {...register("check", {required : true})}></input><p className='b-register__checked'>Al resgistrar una cuenta usted reconoce tener la edad legal para el consumo de bebidas alcohólicas en tu país. Por favor no compartas este contenido a personas menores de edad.</p>
             </div>
-          <Button className="b-register__form___button" text="Registrar"></Button>
+          <Button className="b-register__form___button" text="REGISTRAR"></Button>
         </form>
       </div>
     )

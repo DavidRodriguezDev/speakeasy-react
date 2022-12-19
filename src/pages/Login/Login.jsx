@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Button from '../../components/Button/Button';
+import Cross from '../../components/Cross/Cross';
 import { loginUser} from '../../redux/auth.actions';
 import "./Login.scss"
 
@@ -20,7 +21,13 @@ const Login = () => {
 
   return (
     <div className='b-login__container'>
-      <h1 className='b-title'>NEW YORK´S SPEAKEASY</h1>
+      <div className='b-login-header'>
+        <h3 className='b-opacity'>0</h3>
+        <h1 className='b-title'>CHICAGO´S SPEAKEASY</h1>
+        <div className='b-cross'>
+          <Cross src="../../assets/close.png"></Cross>
+        </div>
+      </div>  
       <form className='b-login__form' onSubmit={handleSubmit(send)}>
         <label className='b-login__label'>Email Usuario</label>
         <input className='b-login__input' type="text" placeholder='Email Usuario' {...register("email",
@@ -51,7 +58,7 @@ const Login = () => {
               {errors.password.type === "pattern" && <p className='b-login__error'>{errors.password.message}</p>}
             </>}
             </div>
-        <Button className="b-login__form___button" text="Comenzar"></Button>
+        <Button className="b-login__form___button" text="COMENZAR"></Button>
       </form>
       <div className='b-login-recover'>
         <p className='b-login-question'>¿No puedes iniciar sesión? <NavLink style={{ textDecoration: 'none' }} to={'/gin'}><span className='b-login__span'>Restablecer contraseña</span></NavLink></p>
