@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
+import DetailCocktail from './pages/DetailCocktail/DetailCocktail';
 import Gin from './pages/Gin/Gin';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
@@ -32,6 +33,7 @@ function App() {
             <Route path="/login" element={<Login/>}></Route>
             <Route path="/register" element={<Register/>}></Route>
             <Route path="/recipes" element={token ? <Recipes/> : <Login></Login>}></Route>
+            <Route path="/:idCocktail" element={token ? <DetailCocktail/> : <Login></Login>}></Route>
           </Routes>
         </Router>
       </UserContext.Provider>

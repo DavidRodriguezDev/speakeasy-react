@@ -1,9 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import "./CocktailCard.scss"
 
 const CocktailCard = ({cocktail}) => {
+
+    const navigate = useNavigate();
+
   return (
-    <div className='b-cocktailcard__container'>
+    <div onClick={()=> navigate(`/${cocktail._id}`)} className='b-cocktailcard__container'>
         <div className='b-cocktailcard__name'>
             <h2>{cocktail.name.toUpperCase()}</h2>
         </div>

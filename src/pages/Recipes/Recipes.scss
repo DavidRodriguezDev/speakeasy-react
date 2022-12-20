@@ -38,6 +38,10 @@
         align-items: center;
     }
 
+    &__links {
+        cursor: pointer;
+    }
+
     &__card {
         min-height: 100vh;
     }
