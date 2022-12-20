@@ -11,7 +11,7 @@ const Home = () => {
             en Estados Unidos (1920-1933)</p>
         </div>
         <article className="b-home__history">
-            <section>
+            <section className='b-home__section'>
                 <div className='b-home__beginnings'>
                     <h2 className='b-home__titles'>LOS COMIENZOS</h2>
                     <h3>Todo comenzó en 1919, cuando se  se ratificó la 18.ª enmienda a la Constitución de Estados Unidos, que prohibía 
@@ -26,7 +26,7 @@ const Home = () => {
                     se convirtió en un problema geopolítico, pues Estados Unidos estaba rodeado de productores de brebajes potentes.</p>
                 </div>  
             </section>
-            <section>
+            <section className='b-home__section'>
                 <div className='b-home__wishes'>
                     <h2 className='b-home__titles'>LOS ANHELOS DE PROHIBICIÓN</h2>
                     <h3>Tras acabar la Primera Guerra Mundial, la sociedad estadounidense decidió disfrutar de la vida.</h3><p>Para paliar
@@ -36,7 +36,7 @@ const Home = () => {
                     miembros que las formaban aseguraban que acabaría con la delincuencia de las ciudades.</p> 
                 </div>
             </section>
-            <section>
+            <section className='b-home__section'>
                 <div className='b-home__impact'>
                     <h2 className='b-home__titles'>LAS CONSECUENCIAS</h2>
                     <h3>Las consecuencias fueron muy contrarias ya que, no solo favorecieron al <b>tráfico ilegal de licores</b>, sino 
@@ -47,7 +47,7 @@ const Home = () => {
                     <b>control de la destilación</b> y la <b>distribución ilegal de licores</b>.</p>
                 </div>
             </section>
-            <section>
+            <section className='b-home__section'>
                 <div className='b-home__end'>
                     <h2 className='b-home__titles'>EL FIN DE LA LEY SECA</h2>
                     <h3>Las destilerías y los Speakeasy fueron controlados por gángsteres, siendo el más conocido <b>Al Capone,</b></h3><p>que en solo 
@@ -59,7 +59,7 @@ const Home = () => {
         </article>
         <div className='b-position-nav'>
             <NavBar></NavBar>
-          </div>
+        </div>
     </div>
   )
 }
