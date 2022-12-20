@@ -1,10 +1,12 @@
 import React from 'react'
 import NavBar from '../../components/NavBar/NavBar'
+import Title from '../../components/Titlte/Title'
 import "./Tequila.scss"
 
 const Tequila = () => {
   return (
     <div className='b-tequila__container'>
+      <Title text={"TEQUILA"}></Title>
       <article className='b-tequila__history'>
             <section className='b-tequila__section'>
                 <h2 className='b-tequila__titles'>HISTORIA</h2>
@@ -79,7 +81,7 @@ const Tequila = () => {
                 <h3 className='b-tequila__titles--sec'>Añejo (Extra aged)</h3>
                 <p>
                     Este tequila ha sido añejado por un mínimo de un año en barrica de roble. En este caso la madera aporta un sabor a madera más intenso, completamente
-                    <b>opuesto</b> al del Reposado.
+                    <b> opuesto</b> al del Reposado.
                 </p>
                 <h3 className='b-tequila__titles--sec'>Extra añejo (Ultra aged)</h3>
                 <p>

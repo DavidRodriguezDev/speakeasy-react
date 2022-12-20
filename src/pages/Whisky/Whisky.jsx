@@ -1,10 +1,12 @@
 import React from 'react'
 import NavBar from '../../components/NavBar/NavBar'
+import Title from '../../components/Titlte/Title'
 import "./Whisky.scss"
 
 const Whisky = () => {
   return (
     <div className='b-whisky__container'>
+      <Title text={"WHISKY"}></Title>
       <article className='b-whisky__history'>
             <section className='b-whisky__section'>
                 <h2 className='b-whisky__titles'>HISTORIA</h2>

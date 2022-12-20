@@ -1,10 +1,12 @@
 import React from 'react'
 import NavBar from '../../components/NavBar/NavBar'
+import Title from '../../components/Titlte/Title'
 import "./Rum.scss"
 
 const Rum = () => {
   return (
     <div className='b-rum__container'>
+      <Title text={"RON"}></Title>
       <article className='b-rum__history'>
             <section className='b-rum__section'>
                 <h2 className='b-rum__titles'>HISTORIA</h2>
