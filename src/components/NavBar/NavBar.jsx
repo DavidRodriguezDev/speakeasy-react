@@ -17,35 +17,35 @@ const NavBar = () => {
       <div className='b-navbar'>
         <div className='b-complete-icon' onClick={() => navigate("/")}>
           <img  className='b-icon' src='/assets/home.svg' alt="Casa"></img>
-          <small className='b-span-icon'>Home</small>
+          <small className='b-span-icon'>HOME</small>
         </div>
         <div className='b-complete-icon' onClick={() => navigate("/gin")}>
           <img  className='b-icon' src='/assets/gin.svg' alt="Gin"></img>
-          <small className='b-span-icon'>Gin</small>
+          <small className='b-span-icon'>GIN</small>
         </div>
         <div className='b-complete-icon' onClick={() => navigate("rum")}>
           <img  className='b-icon' src='/assets/rum.svg' alt=""></img>
-          <small className='b-span-icon'>Rum</small>
+          <small className='b-span-icon'>RUM</small>
         </div>
         <div className='b-complete-icon' onClick={() => navigate("/tequila")}>
           <img  className='b-icon' src='/assets/tequila.svg' alt=""></img>
-          <small className='b-span-icon'>Tequila</small>
+          <small className='b-span-icon'>TEQUILA</small>
         </div>
         <div className='b-complete-icon' onClick={() => navigate("/vodka")}>
           <img  className='b-icon' src='/assets/vodka.svg' alt=""></img>
-          <small className='b-span-icon'>Vodka</small>
+          <small className='b-span-icon'>VODKA</small>
         </div>
         <div className='b-complete-icon' onClick={() => navigate("/whisky")}>
           <img  className='b-icon' src='/assets/whisky.svg' alt=""></img>
-          <small className='b-span-icon'>Whisky</small>
+          <small className='b-span-icon'>WHISKY</small>
         </div>
         <div className='b-complete-icon' onClick={() => navigate("/recipes")}>
           <img  className='b-icon' src='/assets/recipes.svg' alt=""></img>
-          <small className='b-span-icon'>Recipes</small>
+          <small className='b-span-icon'>COCKTAILS</small>
         </div>
         {token ? <div className='b-complete-icon' onClick={() => dispatch(logOut(navigate))}>
                     <img  className='b-icon' src='/assets/out.svg' alt=""></img>
-                    <small className='b-span-icon'>Log out</small>
+                    <small className='b-span-icon'>LOGOUT</small>
                    </div>
                 : <div className='b-complete-icon' onClick={() => navigate("/login")}>
                     <img  className='b-icon' src='/assets/login.svg' alt=""></img>

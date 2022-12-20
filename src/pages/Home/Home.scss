@@ -5,8 +5,9 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-color: var(--yellow);
+        background-color: var(--black);
         min-height: 100vh;
+        color: var(--white);
     }
 
     &__hero {
@@ -20,7 +21,7 @@
     }
 
     &__titles {
-        color: var(--red);
+        color: var(--yellow);
     }
 
 }

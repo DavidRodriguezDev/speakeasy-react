@@ -20,6 +20,27 @@
         flex-direction: column;
         margin-top: 30px;
     }
+
+    &__title {
+        font-size: 3.5rem;
+        color: var(--yellow);
+    }
+    
+    &__moment {
+        width: 80%;
+        font-size: 1.3rem;
+    }
+
+    &__filters {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__card {
+        min-height: 100vh;
+    }
   
 }
 
@@ -32,4 +53,5 @@
 
 .dark {
     color: var(--yellow);
+    text-decoration: underline;
 }
