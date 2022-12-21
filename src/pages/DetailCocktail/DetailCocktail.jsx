@@ -13,14 +13,18 @@ const DetailCocktail = () => {
     useEffect(() => {
         const getCocktail = async () => {
             const {data} = await axios.get(`http://localhost:3040/cocktails/${idCocktail}`);
-            localStorage.setItem("ingredients", JSON.stringify(data.ingredients[0]));
+            localStorage.setItem("info", JSON.stringify(data.ingredients[0]));
+            localStorage.setItem("mainIngredient", JSON.stringify(data.ingredients[0].mainIngredient));
+            localStorage.setItem("measures", JSON.stringify(data.ingredients[0].measures));
+            localStorage.setItem("restIngredients", JSON.stringify(data.ingredients[0].restIngredients));
             setCocktail(data);
         }  
         getCocktail() 
-        console.log(cocktail); 
     }, [])
 
-
+    const mainIngredient = JSON.parse(localStorage.getItem("mainIngredient"));
+    const restIngredients = JSON.parse(localStorage.getItem("restIngredients"));
+    const measures = JSON.parse(localStorage.getItem("measures"));
 
   return (
     <div className='b-detailcocktail__container'>
@@ -53,11 +57,11 @@ const DetailCocktail = () => {
             <h3>INGREDIENTS :</h3> 
             <div className='b-detailcocktail__ingredients--container'>  
                 <div className='b-detailcocktail__ingredients'>
-                    <h3 className='b-detailcocktail__main'>{cocktail.ingredients[0].mainIngredient}</h3>
-                        {cocktail.ingredients[0].restIngredients && cocktail.ingredients[0].restIngredients.map((ingredient, index) => <h4 key={index}>{ingredient}</h4>)}
+                    <h3 className='b-detailcocktail__main'>{mainIngredient}</h3>
+                        {restIngredients.map((ingredient, index) => <h4 key={index}>{ingredient}</h4>)}
                 </div>
                 <div className='b-detailcocktail__measures'>
-                    {cocktail.ingredients[0].measures && cocktail.ingredients[0].measures.map((measure, index) => <h4 key={index}>{measure}</h4>)}
+                    {measures.map((measure, index) => <h4 key={index}>{measure}</h4>)}
                 </div>
             </div>
         </div> 
