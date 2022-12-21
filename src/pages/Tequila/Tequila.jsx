@@ -14,16 +14,16 @@ const Tequila = () => {
                     bebidas. Esta bebida baja en alcohol se la conocía como <i>"Octlí"</i>.
                 </p>
                 <p>
-                    Como la destilación se acababa de introducir en Europa en el <span class="destacado">SXVI</span>, comenzaron en <b>México</b> a experimentar con la destilación de la
+                    Como la destilación se acababa de introducir en Europa en el SXVI, comenzaron en <b>México</b> a experimentar con la destilación de la
                     bebida, que más tarde se la conocería por el nombre de <i>"Pulque"</i> hasta nuestros días. A este nuevo destilado se le llamó <b>vino de mezcal</b>,
                     que se podía definir como el alcohol del agave horneado.
                 </p>
                 <p>
-                    Uno de los productores artesanales más prominentes en el <span class="destacado">SXVII</span> fue <b>José Antonio de Cuervo</b>. En <span class="destacado">1795</span> la primera licencia para producir
+                    Uno de los productores artesanales más prominentes en el SXVII fue <b>José Antonio de Cuervo</b>. En 1795 la primera licencia para producir
                     vino de mezcal se le concedió a la familia Cuervo.
                 </p>
                 <p>
-                    El <span class="destacado">tequila</span> consiguió su gran expansión internacional durante la época de la <b>Ley Seca</b> en la que enormes cantidades de <span class="destacado">tequila</span> y <b>mezcal</b>
+                    El tequila consiguió su gran expansión internacional durante la época de la <b>Ley Seca</b> en la que enormes cantidades de tequila y <b>mezcal</b>
                     se introducían de contrabando a traves de la frontera mexicana hacia California y Texas.
                 </p>
             </section>
@@ -53,7 +53,7 @@ const Tequila = () => {
             </section>
             <section className='b-tequila__section'>
                 <h2 className='b-tequila__titles'>CLASIFICACIÓN</h2>
-                <p>El <span class="destacado">tequila</span> es una denominación de origen como el cognac o el champagne. Como tal, la elaboración está sujeta a un estricto conjunto de 
+                <p>El tequila es una denominación de origen como el cognac o el champagne. Como tal, la elaboración está sujeta a un estricto conjunto de 
                     regularizaciones para poder utilizar dicho nombre. Estas regularizaciones controlan no solo los ingredientes sino los límites geográficos.
                 </p>
                 <p>El corazón de la industria del tequila se encuentra en el <b>Estado de Jalisco</b>. Además, el tequila puede elaborarse en los estados vecinos de 

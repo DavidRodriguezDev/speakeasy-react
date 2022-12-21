@@ -13,16 +13,18 @@ const DetailCocktail = () => {
     useEffect(() => {
         const getCocktail = async () => {
             const {data} = await axios.get(`http://localhost:3040/cocktails/${idCocktail}`);
+            localStorage.setItem("ingredients", JSON.stringify(data.ingredients[0]));
             setCocktail(data);
+        }  
+        getCocktail() 
+        console.log(cocktail); 
+    }, [])
 
-        }
-        getCocktail()
-    }, [idCocktail])
 
 
   return (
     <div className='b-detailcocktail__container'>
-        <div className='b-detailcocktail__header'>
+        <div className='b-detailcocktail__header'> 
             <BackButton src="../../assets/left.png"></BackButton>
             <h1 className='b-title'>CHICAGO´S SPEAKEASY</h1>
             <h3 className='b-opacity'>0</h3>
@@ -38,15 +40,27 @@ const DetailCocktail = () => {
                     <h3 className='b-detailcocktail__mixologist--name'>{user}</h3>
                 </div>       
             </div>
-            <div className='b-detailcocktail__method--container'>
-                <h3 className='b-detailcocktail__method'>MÉTODO DE ELABORACIÓN : </h3>
-                <h5 className='b-detailcocktail__method--sec'>{cocktail.method}</h5>
+            <div className='b-detailcocktail__spects--container'>
+                <h3 className='b-detailcocktail__spects'>MÉTODO DE ELABORACIÓN : </h3>
+                <h5 className='b-detailcocktail__spects--sec'>{cocktail.method}</h5>
+                <h3 className='b-detailcocktail__spects'>HIELO : </h3>
+                <h5 className='b-detailcocktail__spects--sec'>{cocktail.ice}</h5>
+                <h3 className='b-detailcocktail__spects'>TIPO DE VASO : </h3>
+                <h5 className='b-detailcocktail__spects--sec'>{cocktail.glass}</h5>
+                <h3 className='b-detailcocktail__spects'>DECORACIÓN : </h3>
+                <h5 className='b-detailcocktail__spects--sec'>{cocktail.decoration}</h5>
             </div>
-            <div className='b-detailcocktail__ingredients'>
-                <h3>INGREDIENTS :</h3>
-                
+            <h3>INGREDIENTS :</h3> 
+            <div className='b-detailcocktail__ingredients--container'>  
+                <div className='b-detailcocktail__ingredients'>
+                    <h3 className='b-detailcocktail__main'>{cocktail.ingredients[0].mainIngredient}</h3>
+                        {cocktail.ingredients[0].restIngredients && cocktail.ingredients[0].restIngredients.map((ingredient, index) => <h4 key={index}>{ingredient}</h4>)}
+                </div>
+                <div className='b-detailcocktail__measures'>
+                    {cocktail.ingredients[0].measures && cocktail.ingredients[0].measures.map((measure, index) => <h4 key={index}>{measure}</h4>)}
+                </div>
             </div>
-        </div>
+        </div> 
         
     </div>
   )
