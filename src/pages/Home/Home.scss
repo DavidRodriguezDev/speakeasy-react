@@ -1,0 +1,39 @@
+.b-home {
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--black);
+        min-height: 100vh;
+        color: var(--white);
+    }
+
+    &__hero {
+        text-align: center;
+        width: 80%;
+        padding-top: 30px;
+    }
+
+    &__history{
+        text-align: center;
+        width: 80%;
+    }
+
+    &__titles {
+        color: var(--yellow);
+    }
+
+}
+
+.b-home__section {
+    margin: 60px 0 130px 0;
+}
+
+.b-position-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50vw;
+    transform: translate(-50%, 0%);
+}

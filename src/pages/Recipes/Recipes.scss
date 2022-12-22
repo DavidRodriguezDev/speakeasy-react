@@ -1,0 +1,61 @@
+.b-recipes {
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: var(--black);
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 130px;
+    }
+
+    &__header {
+        display: flex;
+        width: 100%;
+        max-width: 600px;
+        justify-content: space-evenly;
+        align-items: center;
+        color: white;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    &__title {
+        font-size: 3.5rem;
+        color: var(--yellow);
+    }
+    
+    &__moment {
+        width: 80%;
+        font-size: 1.3rem;
+    }
+
+    &__filters {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__links {
+        cursor: pointer;
+    }
+
+    &__card {
+        min-height: 100vh;
+    }
+  
+}
+
+.b-position-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50vw;
+    transform: translate(-50%, 0%);
+}
+
+.dark {
+    color: var(--yellow);
+    text-decoration: underline;
+}

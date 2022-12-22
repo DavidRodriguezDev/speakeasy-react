@@ -1,0 +1,39 @@
+.b-rum {
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--black);
+        min-height: 100vh;
+        color: var(--white);
+    }
+
+    &__history{
+        text-align: center;
+        width: 80%;
+        padding-top: 30px;
+    }
+
+    &__titles {
+        color: var(--yellow);
+
+        &--sec {
+            color: var(--red);
+        }
+    }
+
+    &__section {
+        margin-bottom: 100px;
+    }
+}
+
+
+
+.b-position-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50vw;
+    transform: translate(-50%, 0%);
+}
